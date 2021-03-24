@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SysGames.Models
 {
-	public class Jogo
+	public class Jogo : Produto
 	{
 		public string Genero { get; set; }
 		public string Classificacao { get; set; }

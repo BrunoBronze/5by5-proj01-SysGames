@@ -7,6 +7,7 @@ namespace SysGames.Models
 {
 	public class Pagamento
 	{
-		public Carrinho Carrinho { get; set; }
+        public int PagamentoID { get; set; }
+        public virtual Carrinho Carrinho { get; set; }
 	}
 }

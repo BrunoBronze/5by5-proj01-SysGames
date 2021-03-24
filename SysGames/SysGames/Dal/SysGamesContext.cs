@@ -1,6 +1,8 @@
-﻿using System;
+﻿using SysGames.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -12,9 +14,7 @@ namespace SysGames.Dal
         {
         }
 
-        public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Cartao> Cartoes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Videogame> Videogames { get; set; }
         public DbSet<Jogo> Jogos { get; set; }
@@ -23,5 +23,10 @@ namespace SysGames.Dal
         public DbSet<Pagamento> Pagamentos { get; set; }
         public DbSet<Carrinho> Carrinhos { get; set; }
         public DbSet<ItemCarrinho> ItemsCarrinho { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }

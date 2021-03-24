@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SysGames.Dal;
+using SysGames.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,14 +32,14 @@ namespace SysGames.Controllers
         }
 
         public ActionResult Edit(int id) {
-            return View(db.Clientes.First(c => c.Id == id));
+            return View(db.Clientes.First(c => c.ClienteID == id));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Cliente cliente) {
             if (ModelState.IsValid) {
-                var clienteUpdate = db.Clientes.First(c => c.Id == cliente.Id);
+                var clienteUpdate = db.Clientes.First(c => c.ClienteID == cliente.ClienteID);
                 clienteUpdate.CPF = cliente.CPF;
                 clienteUpdate.Nome = cliente.Nome;
                 clienteUpdate.Email = cliente.Email;
@@ -57,21 +59,19 @@ namespace SysGames.Controllers
         }
 
         public ActionResult Details(int id) {
-            return View(db.Clientes.First(c => c.Id == id));
+            return View(db.Clientes.First(c => c.ClienteID == id));
         }
 
         public ActionResult Delete(int id) {
-            return View(db.Clientes.First(c => c.Id = id));
+            return View(db.Clientes.First(c => c.ClienteID == id));
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirm(int id) {
-            db.Clientes.Remove(db.Clientes.First(c => c.Id == id));
+            db.Clientes.Remove(db.Clientes.First(c => c.ClienteID == id));
             db.SaveChanges();
-            RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
-
-
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SysGames.Dal;
+using SysGames.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,14 +30,14 @@ namespace SysGames.Controllers {
         }
 
         public ActionResult Edit(int id) {
-            return View(db.Vendas.First(v => v.Id == id));
+            return View(db.Vendas.First(v => v.VendaID == id));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Venda venda) {
             if (ModelState.IsValid) {
-                var vendaUpdate = db.Vendas.First(v => v.Id == venda.Id);
+                var vendaUpdate = db.Vendas.First(v => v.VendaID == venda.VendaID);
                 vendaUpdate.DataHora = venda.DataHora;
                 vendaUpdate.Previsao = venda.Previsao;
                 db.SaveChanges();
@@ -45,17 +47,17 @@ namespace SysGames.Controllers {
         }
 
         public ActionResult Details(int id) {
-            return View(db.Vendas.First(v => v.Id == id));
+            return View(db.Vendas.First(v => v.VendaID == id));
         }
         
         public ActionResult Delete(int id) {
-            return View(db.Vendas.First(v => v.Id == id));
+            return View(db.Vendas.First(v => v.VendaID == id));
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirm(int id) {
-            db.Vendas.Remove(db.Vendas.First(v => v.Id == id));
+            db.Vendas.Remove(db.Vendas.First(v => v.VendaID == id));
             db.SaveChanges();
             return RedirectToAction("Index");
         }
