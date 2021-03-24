@@ -131,6 +131,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Acessorio.cs" />
+    <Compile Include="Models\Carrinho.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ItemCarrinho.cs" />
+    <Compile Include="Models\Jogo.cs" />
+    <Compile Include="Models\Pagamento.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\Videogame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
