@@ -84,7 +84,6 @@ namespace SysGames.Dal
                     {
                         Carrinho = new Carrinho()
                         {
-                            
                             CarrinhoID = 1,
                             Produto = videogames[0],
                             Cliente = clientes[0],
