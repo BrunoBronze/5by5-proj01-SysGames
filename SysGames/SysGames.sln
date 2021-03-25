@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysGames", "SysGames\SysGames.csproj", "{8B0518A5-FE7E-429B-95F0-9B58C5B0E253}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysGames", "SysGames\SysGames.csproj", "{3B8C4C1B-36C7-48E7-9270-2487BA7153A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B0518A5-FE7E-429B-95F0-9B58C5B0E253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B0518A5-FE7E-429B-95F0-9B58C5B0E253}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B0518A5-FE7E-429B-95F0-9B58C5B0E253}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B0518A5-FE7E-429B-95F0-9B58C5B0E253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8C4C1B-36C7-48E7-9270-2487BA7153A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8C4C1B-36C7-48E7-9270-2487BA7153A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8C4C1B-36C7-48E7-9270-2487BA7153A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8C4C1B-36C7-48E7-9270-2487BA7153A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {30C072C4-BC60-4468-A0B0-0F1A9F504C89}
+		SolutionGuid = {A42C0E88-7C05-467B-897E-DAEF591FE275}
 	EndGlobalSection
 EndGlobal
