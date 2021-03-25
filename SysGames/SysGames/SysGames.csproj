@@ -203,6 +203,7 @@
     <Content Include="Views\Venda\Delete.cshtml" />
     <Content Include="Views\Venda\Details.cshtml" />
     <Content Include="Views\Venda\Edit.cshtml" />
+    <Content Include="Views\Venda\Create.cshtml" />
     <Content Include="Views\Venda\Index.cshtml" />
     <Content Include="Views\Videogame\Create.cshtml" />
     <Content Include="Views\Videogame\Details.cshtml" />

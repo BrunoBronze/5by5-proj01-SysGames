@@ -22,9 +22,18 @@ namespace SysGames.Controllers {
         [ValidateAntiForgeryToken]
         public ActionResult Create(Venda venda) {
             if (ModelState.IsValid) {
-                db.Vendas.Add(venda);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                var cliente = db.Clientes.Find(venda.Pagamento.Carrinho.Cliente.ClienteID);
+                if (cliente != null)
+                {
+                    venda.Pagamento.Carrinho.Cliente = cliente;
+                    db.Vendas.Add(venda);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    //msg de erro Cliente ID
+                }
             }
             return View(venda);
         }
