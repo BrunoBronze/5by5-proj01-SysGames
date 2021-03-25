@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SysGames.Models
 {
-	public class Acessorio
+	public class Acessorio :Produto
 	{
 		public string Tipo { get; set; }
 	}

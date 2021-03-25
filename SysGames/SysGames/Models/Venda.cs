@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,9 +8,11 @@ namespace SysGames.Models
 {
 	public class Venda
 	{
-		public int Id { get; set; }
-		public Pagamento Pagamento { get; set; }
+		public int VendaID { get; set; }
+		public virtual Pagamento Pagamento { get; set; }
+		[Display(Name = "Data Hora")]
 		public DateTime DataHora { get; set; }
+		[Display(Name = "Previsão de entrega")]
 		public DateTime Previsao { get; set; }
 	}
 }
