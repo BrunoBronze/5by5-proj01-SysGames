@@ -7,7 +7,10 @@ namespace SysGames.Models
 {
 
 	public class Acessorio : Produto
-{
-		public string Tipo { get; set; }
+	{
+		public Acessorio()
+		{
+			Tipo = "Acessorio";
+		}
 	}
 }

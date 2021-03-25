@@ -10,5 +10,10 @@ namespace SysGames.Models
 	{
 		public string Marca { get; set; }
 		public string Modelo { get; set; }
+        
+        public Videogame()
+        {
+			Tipo = "Console";
+        }
     }
 }

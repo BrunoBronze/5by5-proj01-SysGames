@@ -13,7 +13,8 @@ namespace SysGames.Controllers
         private SysGamesContext db = new SysGamesContext();
         // GET: Cliente
         public ActionResult Index() {
-            return View(db.Produtos.ToList());
+            var list = db.Produtos.OrderBy(l => l.Tipo).ToList();
+            return View(list);
         }
         
         public ActionResult Edit(int id) {

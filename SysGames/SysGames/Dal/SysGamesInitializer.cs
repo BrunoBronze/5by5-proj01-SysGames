@@ -66,8 +66,8 @@ namespace SysGames.Dal
                 {
                     ProdutoID = 3,
                     Nome = "Controle PS5",
-                    Descricao = "Jogo foda",
-                    Valor = 399.90f,
+                    Descricao = "Funciona bem",
+                    Valor = 599.90f,
                     QtdEstoque = 7,
                     Tipo = "PS5"
                 }

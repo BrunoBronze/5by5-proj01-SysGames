@@ -17,5 +17,6 @@ namespace SysGames.Models
 		public float Valor { get; set; }
 		[Display(Name = "Quantidade de Estoque")]
 		public int QtdEstoque { get; set; }
-	}
+        public string Tipo { get; set; }
+    }
 }

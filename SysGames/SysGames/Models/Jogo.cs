@@ -12,5 +12,10 @@ namespace SysGames.Models
 		public string Genero { get; set; }
 		[Display(Name = "Classificação")]
 		public string Classificacao { get; set; }
+
+		public Jogo()
+        {
+			Tipo = "Jogo";
+        }
 	}
 }
