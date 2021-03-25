@@ -1,4 +1,3 @@
-C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.csprojAssemblyReference.cache
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.csproj.CoreCompileInputs.cache
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\bin\SysGames.dll.config
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\bin\SysGames.dll
@@ -81,3 +80,4 @@ C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\bin\Mi
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.csproj.CopyComplete
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.dll
 C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.pdb
+C:\temp\ws-c#\5by5-proj01-SysGames\5by5-proj01-SysGames\SysGames\SysGames\obj\Debug\SysGames.csprojAssemblyReference.cache

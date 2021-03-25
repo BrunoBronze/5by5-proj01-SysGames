@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SysGames.Models
 {
-	public abstract class Produto
+	public class Produto
 	{
 		[Display(Name = "ID do Produto")]
 		//[Range]

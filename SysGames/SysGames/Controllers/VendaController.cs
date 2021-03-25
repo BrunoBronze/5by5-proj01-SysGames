@@ -25,13 +25,24 @@ namespace SysGames.Controllers {
                 var cliente = db.Clientes.Find(venda.Pagamento.Carrinho.Cliente.ClienteID);
                 if (cliente != null)
                 {
-                    venda.Pagamento.Carrinho.Cliente = cliente;
-                    db.Vendas.Add(venda);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
+                    var produto = db.Produtos.Find(venda.Pagamento.Carrinho.Produto.ProdutoID);
+                    if (produto != null)
+                    {
+                        venda.Pagamento.Carrinho.Cliente = cliente;
+                        venda.Pagamento.Carrinho.Produto = produto;
+                        venda.DataHora = DateTime.Now;
+                        db.Vendas.Add(venda);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        //msg de erro Produto ID
+                    }
                 }
                 else
                 {
+                    //venda.Pagamento.Carrinho.Cliente.ClienteID = ;
                     //msg de erro Cliente ID
                 }
             }
