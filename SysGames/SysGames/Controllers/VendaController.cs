@@ -1,9 +1,7 @@
 ﻿using SysGames.Dal;
 using SysGames.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SysGames.Controllers {
@@ -57,23 +55,18 @@ namespace SysGames.Controllers {
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Venda venda) {
-            if (venda.Previsao.Date > DateTime.Now.Date) {
-                if (ModelState.IsValid) {
-                    var cliente = db.Clientes.Find(venda.Pagamento.Carrinho.Cliente.ClienteID);
-                    if (cliente != null) {
-                        var vendaUpdate = db.Vendas.First(v => v.VendaID == venda.VendaID);
-                        vendaUpdate.Previsao = venda.Previsao;
-                        db.SaveChanges();
-                        return RedirectToAction("Index");
-                    }
-                    else {
-                        ViewBag.Cliente = "Cliente ID nao existe";
-                    }
-                }
-            }
-            else {
-                ViewBag.Previsao = "Previsao deve ser uma data futura!";
-            }
+            if (ModelState.IsValid)
+                if (venda.Previsao.Date > DateTime.Now.Date)
+                    if (db.Clientes.Find(venda.Pagamento.Carrinho.Cliente.ClienteID) != null)
+                        if (db.Produtos.Find(venda.Pagamento.Carrinho.Produto.ProdutoID) != null) {
+                            var vendaUpdate = db.Vendas.First(v => v.VendaID == venda.VendaID);
+                            vendaUpdate.Previsao = venda.Previsao;
+                            db.SaveChanges();
+                            return RedirectToAction("Index");
+                        }
+                        else ViewBag.Produto = "Produto ID nao existe";
+                    else ViewBag.Cliente = "Cliente ID nao existe";
+                else ViewBag.Previsao = "Previsao deve ser uma data futura!";
             return View(venda);
         }
 
