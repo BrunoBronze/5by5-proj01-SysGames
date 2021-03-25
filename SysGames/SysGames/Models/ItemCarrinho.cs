@@ -12,6 +12,7 @@ namespace SysGames.Models
 		public int ItemID { get; set; }
 		public int ProdutoID { get; set; }
 		public virtual Produto Produto { get; set; }
+
 		public string Nome { get; set; }
 		[Display(Name = "Descrição")]
 		public string Descricao { get; set; }

@@ -15,4 +15,5 @@ namespace SysGames.Models
 		[Display(Name = "Previsão de entrega")]
 		public DateTime Previsao { get; set; }
 	}
+
 }
