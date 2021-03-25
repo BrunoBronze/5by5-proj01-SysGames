@@ -8,6 +8,7 @@ namespace SysGames.Models
 {
 	public class Cliente
 	{
+		[Required(ErrorMessage = "Cliente inválido")]
 		public int ClienteID { get; set; }
 		public string CPF { get; set; }
 		public string Nome { get; set; }

@@ -9,6 +9,7 @@ namespace SysGames.Models
 	public class Produto
 	{
 		[Display(Name = "ID do Produto")]
+		[Required(ErrorMessage = "Produto inválido")]
 		//[Range]
 		public int ProdutoID { get; set; }
 		public string Nome { get; set; }

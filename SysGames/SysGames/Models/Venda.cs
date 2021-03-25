@@ -13,6 +13,8 @@ namespace SysGames.Models
 		[Display(Name = "Data Hora")]
 		public DateTime DataHora { get; set; }
 		[Display(Name = "Previsão de entrega")]
+
+		[Required(ErrorMessage = "Data inválida")]
 		public DateTime Previsao { get; set; }
 	}
 
