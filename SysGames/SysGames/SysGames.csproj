@@ -198,7 +198,6 @@
     <Content Include="Views\Jogo\Details.cshtml" />
     <Content Include="Views\Jogo\Edit.cshtml" />
     <Content Include="Views\Produto\Delete.cshtml" />
-    <Content Include="Views\Produto\Edit.cshtml" />
     <Content Include="Views\Venda\Delete.cshtml" />
     <Content Include="Views\Venda\Details.cshtml" />
     <Content Include="Views\Venda\Edit.cshtml" />

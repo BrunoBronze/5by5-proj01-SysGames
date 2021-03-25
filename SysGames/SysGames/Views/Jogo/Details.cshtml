@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <div>
     <h4>Jogo</h4>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.QtdEstoque)
+            Estoque
         </dt>
 
         <dd>
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", Model) |
-    @Html.ActionLink("Back to List", "Index", "Produto")
+    @Html.ActionLink("Editar", "Edit", Model) |
+    @Html.ActionLink("Voltar para lista de produtos", "Index", "Produto")
 </p>
