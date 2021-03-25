@@ -27,5 +27,28 @@ namespace SysGames.Controllers
             }
             return View(acessorio);
         }
+
+        public ActionResult Edit(Acessorio acessorio) {
+            return View(acessorio);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditA(Acessorio acessorio) {
+            if (ModelState.IsValid) {
+                var acessorioUpdate = db.Acessorios.First(c => c.ProdutoID == acessorio.ProdutoID);
+                acessorioUpdate.Nome = acessorio.Nome;
+                acessorioUpdate.Descricao = acessorio.Descricao;
+                acessorioUpdate.Valor = acessorio.Valor;
+                acessorioUpdate.QtdEstoque = acessorio.QtdEstoque;
+                acessorioUpdate.Tipo = acessorio.Tipo;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Produto");
+            }
+            return View(acessorio);
+        }
+        public ActionResult Details(Acessorio acessorio) {
+            return View(acessorio);
+        }
     }
 }

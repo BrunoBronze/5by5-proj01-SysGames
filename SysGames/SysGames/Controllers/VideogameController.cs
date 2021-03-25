@@ -24,5 +24,31 @@ namespace SysGames.Controllers {
             }
             return View(videogame);
         }
+
+       public ActionResult Edit(Videogame videogame) {
+            return View(videogame);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditVG(Videogame videogame) {
+            if (ModelState.IsValid) {
+                var videogameUpdate = db.Videogames.First(c => c.ProdutoID == videogame.ProdutoID);
+                videogameUpdate.Nome = videogame.Nome;
+                videogameUpdate.Descricao = videogame.Descricao;
+                videogameUpdate.Valor = videogame.Valor;
+                videogameUpdate.QtdEstoque = videogame.QtdEstoque;
+                videogameUpdate.Marca = videogame.Marca;
+                videogameUpdate.Modelo = videogame.Modelo;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Produto");
+            }
+            return View(videogame);
+        }
+
+        public ActionResult Details(Videogame videogame) {
+            return View(videogame);
+        }
+
     }
 }
