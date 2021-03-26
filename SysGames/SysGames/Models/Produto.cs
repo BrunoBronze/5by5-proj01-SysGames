@@ -15,6 +15,8 @@ namespace SysGames.Models
 		public string Nome { get; set; }
 		[Display(Name = "Descrição")]
 		public string Descricao { get; set; }
+
+		[Required(ErrorMessage = "Informe um valor válido")]
 		public float Valor { get; set; }
 		[Display(Name = "Quantidade de Estoque")]
 		public int QtdEstoque { get; set; }
