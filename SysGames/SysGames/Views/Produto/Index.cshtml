@@ -6,11 +6,11 @@
 
 <h2>Produtos</h2>
 
-<p>
-    @Html.ActionLink("Novo Console", "Create", "Videogame")
-    @Html.ActionLink("Novo Jogo", "Create", "Jogo")
-    @Html.ActionLink("Novo Acessório", "Create", "Acessorio")
-</p>
+<div style="display: flex">
+    <p style="margin-right: 2%">@Html.ActionLink("Novo Console", "Create", "Videogame")</p>
+    <p style="margin-right: 2%">@Html.ActionLink("Novo Jogo", "Create", "Jogo")</p>
+    <p>@Html.ActionLink("Novo Acessório", "Create", "Acessorio")</p>
+</div>
 <table class="table">
     <tr>
         <th>
